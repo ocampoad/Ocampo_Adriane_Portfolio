@@ -1,7 +1,9 @@
-* {
-  font-family: 'Lato', sans-serif;
+body {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
@@ -9,13 +11,14 @@ header {
   flex-wrap: wrap;
   font-family: 'Bebas Neue', cursive;
 }
-
-/* HEADER */
 .round {
   object-fit: cover;
   object-position: 50% 20%;
   border-radius: 50%;
   margin-left: 50px;
+  margin-top: 20px;
+  max-width: 14vw;
+  max-height: 14vw;
 }
 
 nav{
@@ -28,53 +31,55 @@ nav>a {
   height: 75px;
   margin: 10px;
   padding: 10px;
-  font-size: 30px;
-  
+  font-size: 2vw;
 }
+
+/* BODY */
 .aboutsection, .projectsection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  border: solid black 2px;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: solid black 2px; */
+  margin: 1% 0;
 }
 
-.aboutsection>h2, .aboutcontent {
+.aboutsection>h2, .aboutcontent, .projectsection>h2{
   display: flex;
   flex-wrap: wrap;
-  border: solid black 2px;
-  max-width: 70%;
-  margin: 1% 1% 1% 50px;
+  /* border: solid black 2px; */
+  max-width: 90%;
+  margin: 1% 0;
   font-size: 25px;
   font-family: 'Bebas Neue', cursive;
 }
 
-.projectsection>h2 {
-  border: solid black 2px;
-  max-width: 70%;
-  margin: 1% 1% 1% 50px;
-  font-size: 25px;
+/* .projectsection>h2 {
+  /* border: solid black 2px; */
+  /* font-size: 25px;
   font-family: 'Bebas Neue', cursive;
-}
+} */ 
 
 .projectcontent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* border: solid rgb(194, 26, 26) 2px; */
+  margin: 1% 0;
+  font-size: 25px;
+  font-family: 'Bebas Neue', cursive;
+  justify-content: space-between;
 }
 
 .projectlink {
-  min-height: 150px;
-  max-height: 150px;
-  flex-basis: calc(50% - 1em);
-  display: flex;
-  align-items: flex-end;
-  padding: 0 0 20px 0;
-  margin: 0.5em;
-  text-decoration: none;
-  background-blend-mode: soft-light;
-  background-size: 150%;
-  transition: all 0.5s;
-  font-size: 0.9rem;
+  /* border: solid blue 2px; */
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+
+h3 {
+  padding: 25%;
 }
 
 @media screen and (max-width: 768px) {
