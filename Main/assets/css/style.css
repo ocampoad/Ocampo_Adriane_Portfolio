@@ -1,85 +1,155 @@
+@font-face {
+  font-family: HELLOISFONT;
+  src: url(./horroroidexpand.ttf);
+}
+
 body {
-  font-family: 'Bebas Neue', cursive;
+  font-family: HELLOISFONT, monospace; 
   font-size: 30px;
+  background-image: url(./../images/Untitled-design-21.webp), url(./../images/Jujutsu-Kaisen-Chapter-168-1.jpg), url(./../images/1573f1ece244f75cfd98c8ba27f08feb.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position:top left, bottom right, bottom left;
+  
 }
 
 /* HEADER */
 header {
+  background-color: rgba(209, 209, 209, 0.8);
+  background-size: 99%;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  font-family: 'Bebas Neue', cursive;
+  align-content: center;
 }
 .round {
   object-fit: cover;
   object-position: 50% 20%;
   border-radius: 50%;
-  margin-left: 50px;
   margin-top: 20px;
   max-width: 14vw;
   max-height: 14vw;
+  align-self: center;
+  border: double black 8px;
+}
+
+.shown {
+  z-index: 1;
+  position: relative;
+}
+.hidden {
+  position:absolute;
+}
+
+.shown:hover {
+  z-index:-1;
 }
 
 nav{
-  margin-right: 5%;
+  background-color: rgba(209, 209, 209, 0.85);
+  border: double black 5px;
+  margin-top: 10px;
 }
 
 nav>a {
   display: inline-flex;
-  color: black;
-  height: 75px;
-  margin: 10px;
+  font-size: 1.8vmax;
   padding: 10px;
-  font-size: 2vw;
 }
 
 /* BODY */
-.aboutsection, .projectsection {
+.aboutsection, .projectsection, .contactsection, .resumesection {
+  background-color: rgba(209, 209, 209, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  /* border: solid black 2px; */
   margin: 1% 0;
 }
 
-.aboutsection>h2, .aboutcontent, .projectsection>h2{
+.aboutsection>h2, .aboutcontent, .projectsection>h2, .contactsection>h2, .contactcontent, .resumecontent, .resumesection>h2{
   display: flex;
   flex-wrap: wrap;
-  /* border: solid black 2px; */
-  max-width: 90%;
+  /* max-width: 99%; */
   margin: 1% 0;
   font-size: 25px;
-  font-family: 'Bebas Neue', cursive;
+  align-items:center;
 }
-
-/* .projectsection>h2 {
-  /* border: solid black 2px; */
-  /* font-size: 25px;
-  font-family: 'Bebas Neue', cursive;
-} */ 
-
-.projectcontent {
+.projectcontent, .contactcontent, .aboutcontent{
   display: flex;
   flex-wrap: wrap;
-  /* border: solid rgb(194, 26, 26) 2px; */
+  border: double black 5px;
   margin: 1% 0;
   font-size: 25px;
-  font-family: 'Bebas Neue', cursive;
-  justify-content: space-between;
+  justify-content:space-evenly;
+  width: 99%;
 }
 
 .projectlink {
-  /* border: solid blue 2px; */
+  border: solid rgb(0, 0, 0) 5px;
   text-align: center;
-  width: 200px;
-  height: 200px;
+  width: 166px;
+  height: 100px;
+  margin: 10px;
+}
+.contactlink  {
+  text-align: center;
+  width: 166px;
+  height: 25px;
+  margin: 10px;
 }
 
-h3 {
-  padding: 25%;
+.projectlink h3 {
+  padding: 25% 0;
+}
+
+.contactlink h3 {
+  padding: 2% 0;
+}
+
+#project1 {
+  background-image: url(./../images/Nagi_Yoshino.webp);
+  background-color: rgba(209, 209, 209, 0.7);
+  background-blend-mode: soft-light;
+  background-size:contain ;
+  background-repeat: no-repeat;
+  
+
+}
+
+#project2 {
+  background-image: url(./../images/Kirara_Hoshi_junior_high_sketch.webp);
+  background-color: rgba(209, 209, 209, 0.7);
+  background-blend-mode: soft-light;
+  background-size:contain ;
+  background-repeat: no-repeat;
+}
+
+#project3 {
+  background-image: url(./../images/Utahime_Iori.webp);
+  background-color: rgba(209, 209, 209, 0.7);
+  background-blend-mode: soft-light;
+  background-size:contain ;
+  background-repeat: no-repeat;
+}
+
+#project4 {
+  background-image: url(./../images/Hiromi_Higuruma.webp);
+  background-color: rgba(209, 209, 209, 0.7);
+  background-blend-mode: soft-light;
+  background-size:contain ;
+  background-repeat: no-repeat;
+}
+
+#project1:hover, #project2:hover, #project3:hover, #project4:hover {
+  background-color: rgba(209, 209, 209, 0);
+  width: 249px;
+  height: 150px;
+}
+
+.contactlink:hover, nav>a:hover {
+  font-size: 150%;
 }
 
 @media screen and (max-width: 768px) {
